@@ -1,0 +1,173 @@
+.warpper1 {
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.warpper2 {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.encryption_table{
+    border: 1px solid black;
+    width: 1000px;
+    height: 500px;
+    margin:0 auto;
+    padding: 3;
+    position: relative;
+}
+
+
+.table_left{
+    border: none;
+    width: 350px;
+    height: 500px;
+    float: left;
+    position:relative;
+}
+
+.left_top{
+    padding: 40px;
+    height: 40px;
+}
+
+.layout_radio_button ul{
+    height: 100%;
+    width: 40%;
+    float: left;
+    position: absolute;
+}
+
+.layout_radio_button li{
+    height: 100%;
+    padding-top: 8px;
+    float: left;
+}
+
+.align_right{
+    right: 0px;
+    position: absolute;
+}
+
+.align_bottom{
+    bottom: 0px;
+    position: absolute;
+}
+
+.left_mid{
+    height: 150px;
+    overflow: hidden;
+}
+
+.left_bottom{
+    bottom: 0px;
+    width: 100%;
+    height: 260px;
+    position: absolute;
+}
+
+.layout_radio_button{
+    height: 30px;
+    width: 220px;
+    display: block;
+    margin: 0 auto;
+    position:relative;
+}
+
+.layout_input_box{
+    height: 30px;
+    width: 230px;
+    display: block;
+    margin: 0 auto;
+    position:relative;
+}
+
+.layout_input_box li{
+    float:left;
+    padding-top: 8px;
+}
+
+
+.table_mid{
+    border: 1px solid black;
+    border-width: 0px 1px 0px 1px;
+    width: 300px;
+    height: 500px;
+    float: left;
+    position: relative;
+}
+
+.table_right{
+    border: none;
+    width: 348px;
+    height: 500px;
+    float: left;
+    position: relative;
+}
+
+.mid_top{
+    width: 100%;
+    height: 60px;
+    padding-top: 40px;
+    text-align: center;
+}
+
+.mid_mid{
+    width: 100%;
+    height: 250px;
+    margin: 0 auto;
+}
+
+.mid_mid ul{
+    padding-top: 90px;
+    padding-left: 95px;
+}
+
+.mid_bottom{
+    width: 290px;
+    height: 150px;
+    margin: 0 auto;
+}
+
+.mid_bottom ul{
+    width: 100%;
+    height: 35px;
+    display:block;
+    position: relative;
+}
+
+.mid_bottom li{
+    float: left;
+}
+
+.scroll_bar{
+    border-color: black;
+    width: 100%-1;
+    height: 100%-20;
+    border-width: 1px 0px 0px 0px;
+    overflow-y: scroll;
+}
+
+.red{
+    color: red;
+}
+
+.right_top{
+    width: 100%;
+    height: 240px;
+    overflow:hidden;
+}
+
+.right_bottom{
+    width: 100%;
+    height: 260px;
+}
+
+.hint{
+    position: absolute;
+    bottom : 10px;
+    left: 8px;
+}
+

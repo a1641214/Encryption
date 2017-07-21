@@ -1,0 +1,69 @@
+//- content_for(:title, 'Encryption')
+- content_for(:head) do
+    %title Encryption
+    = stylesheet_link_tag "encryption"
+    //= javascript_include_tag 'record_and_play'
+%div.warpper1
+    %div.warpper2
+        %div.encryption_table
+            = form_tag "/encryption" do
+                %div.table_left
+                    %div.left_top
+                        %ul.layout_radio_button
+                            %ul
+                                %li TripleDES:
+                                %li.align_right=radio_button_tag :encryption,:TripleDES,MyEncryption.isTrue(session[:encryption],"TripleDES")
+                            %ul.align_right
+                                %li AES(128bits)
+                                %li.align_right=radio_button_tag :encryption,:AES128,MyEncryption.isTrue(session[:encryption],"AES128")
+                        %ul.layout_radio_button
+                            %ul
+                                %li AES(192bits)
+                                %li.align_right=radio_button_tag :encryption,:AES192,MyEncryption.isTrue(session[:encryption],"AES192")
+                            %ul.align_right
+                                %li AES(256bits)
+                                %li.align_right=radio_button_tag :encryption,:AES256,MyEncryption.isTrue(session[:encryption],"AES256")
+                    %div.left_mid
+                        %ul.layout_input_box
+                            %li AES Key:
+                            %li.align_right= text_field :keys, :key,:value => session[:key]
+                        %ul.layout_input_box
+                            %li TripleDES key1:
+                            %li.align_right= text_field :keys, :key1,:value => session[:key1]
+                        %ul.layout_input_box
+                            %li TripleDES key2:
+                            %li.align_right= text_field :keys, :key2,:value => session[:key2]
+                        %ul.layout_input_box
+                            %li TripleDES key3:
+                            %li.align_right= text_field :keys, :key3,:value => session[:key3]
+                    %div.left_bottom
+                        %h4 Message:
+                        =text_area_tag :message,session[:message],:class => "scroll_bar"
+                %div.table_mid
+                    %div.mid_top
+                        %h1 Encryption Simulator
+                        %p.red= flash[:error]
+                    %div.mid_mid
+                        %ul
+                            %li= submit_tag 'Encrypt'
+                            %li= submit_tag 'Decrypt'
+                            %li= submit_tag 'Auto Test'
+                    %div.mid_bottom
+                        %ul
+                            %h3 Download Links:
+                        %ul
+                            %li= link_to "Download EncryptionHeader.rb", download_path(1)
+                            %li.align_right= link_to "Download TripleDES.rb",download_path(2)
+                        %ul
+                            %li= link_to "Download AES.rb",download_path(3)
+                            %li.align_right= link_to "Download EncryptionTest.rb", download_path(4)
+                        %ul
+                            %li.hint Auto test=10s. Download file=refresh page again
+                %div.table_right
+                    %div.right_top 
+                        %h4 Time Spend: #{flash[:time]}
+                        %p.g_inline Audio Record test:
+                        =button_tag "Record&Play", :onclick=> "RecordAndPlay(this);"
+                    %div.right_bottom
+                        %h4 Enciphered data:
+                        =text_area_tag :cipher,session[:cipher],:class => "scroll_bar"
